@@ -1,0 +1,24 @@
+<div class="login-container center-content">
+    <div class="login-form">
+        <div class="login-form-header">
+            First App
+        </div>
+
+        <div class="login-form-row">
+            <label for="userId">Login ID: </label>
+            <input [(ngModel)]="formModel.userId" (onKeyPress)="onKeyPress($event)" placeholder="PID/VID" type="text" name="userId" id="userId"/>
+        </div>
+        <div class="login-form-row">
+            <label for="pwd">Password: </label>
+            <input [(ngModel)]="formModel.pwd" (onKeyPress)="onKeyPress($event)" placeholder="Password" type="password" name="pwd" id="pwd"/>
+        </div>
+        <div class="login-form-row" style="margin-top: 15px;">
+            <button (click)="onLogin()">Login</button>
+            <button class="clear-btn" (click)="onClear()">Clear</button>
+        </div>
+
+        <div *ngIf="user$ | async as user" class="login-form-footer" >
+           <label [ngClass]="user.token ? 'success' : 'failure'">{{userMessage}}</label> 
+        </div>
+    </div>
+</div>

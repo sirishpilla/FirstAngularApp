@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+body {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+label {
+    min-width: 100px;
+    display: inline-block;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    padding: 5px;
+    border: solid 1px #303c4c;
+    background-color: #445f86;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    border: solid 1px #4d5f76;
+    background-color: #6e8db8;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 100px;
+}
+
+.reload {
+    float: right;
+}
+
